@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
-   <div id="loading-screen" style="position: fixed; inset: 0; background: #e0f2fe; z-index: 99999; display: none; opacity: 0; transition: opacity 0.8s; overflow: hidden;">
-        <img src="../Assets/ILOCOS SUR FRONT.png" style="position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 1;" alt="Ilocos Sur Background">
-        <img id="kalesa-anim" src="../Assets/KalesaforAnimation.png" style="position: absolute; bottom: 12%; left: -300px; height: 50%; width: auto; z-index: 2; object-fit: contain;" alt="Kalesa">
+   <div id="loading-screen" class="loading-screen">
+        <img src="../Assets/ILOCOS SUR FRONT.png" class="loading-screen-bg" alt="Ilocos Sur Background">
+        <img id="kalesa-anim" src="../Assets/KalesaforAnimation.png" class="loading-screen-kalesa" alt="Kalesa">
     </div>
 
     <nav id="navbar" class="navbar">
         <div class="nav-container">
-            <div class="nav-logo-group" style="cursor: pointer;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <span style="font-size: 24px;">🏛️</span>
+            <div class="nav-logo-group nav-logo-clickable" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <span class="nav-logo-icon">🏛️</span>
                 <div class="logo-text">Ilocos Sur</div>
             </div>
             <div class="nav-links-group">
@@ -24,12 +24,12 @@
                 <div class="nav-link" data-target=".map-section">Interactive Map</div>
                 <div class="nav-link" data-target=".tour-route-section">Tour Route</div>
                 <div class="nav-link" data-target=".footer">About</div>
-                <button id="plan-trip-btn" class="btn-primary" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); padding: 10px 20px; font-size: 14px; box-shadow: 0 0 15px rgba(255, 143, 0, 0.6), 0 4px 6px rgba(255, 143, 0, 0.3);">Plan a Trip</button>
+                <button id="plan-trip-btn" class="btn-primary plan-trip-btn">Plan a Trip</button>
             </div>
         </div>
     </nav>
 
-    <header class="hero-wrapper" style="background-image: url('../Assets/bantay%20-church.jpg'); background-size: cover; background-position: center;">
+    <header class="hero-wrapper hero-bg-img">
         <div class="hero-bg-gradient"></div>
         <div class="hero-content">
             <div class="badge badge-accent">🇵🇭 ILOCOS SUR, PHILIPPINES</div>
@@ -73,111 +73,111 @@
                 <div class="grid-card destination-grid-card" data-category="heritage">
                     <div class="grid-card-img">
                         <img src="../Assets/vigan-heritage-village.png" onerror="this.src='https://placehold.co/400x300'" alt="Vigan" />
-                        <div style="position: absolute; top: 12px; left: 12px;" class="badge" style="background: #2C5EAD; color: white;">Heritage</div>
+                        <div class="badge grid-card-badge badge-heritage">Heritage</div>
                     </div>
                     <div class="grid-card-content">
-                        <h3 style="margin-bottom: 8px; font-size: 18px;">Vigan Heritage Village</h3>
-                        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px; flex: 1;">UNESCO World Heritage colonial town with cobblestone streets.</p>
-                        <button class="btn-primary" style="width: 100%; padding: 10px; font-size: 14px;" data-target=".map-section" data-dest="Vigan Heritage Village">Find on Map</button>
+                        <h3 class="grid-card-title">Vigan Heritage Village</h3>
+                        <p class="grid-card-desc">UNESCO World Heritage colonial town with cobblestone streets.</p>
+                        <button class="btn-primary grid-card-btn" data-target=".map-section" data-dest="Vigan Heritage Village">Find on Map</button>
                     </div>
                 </div>
                 <div class="grid-card destination-grid-card" data-category="heritage">
                     <div class="grid-card-img">
                         <img src="../Assets/calle-crisologo.png" onerror="this.src='https://placehold.co/400x300'" alt="Calle Crisologo" />
-                        <div style="position: absolute; top: 12px; left: 12px;" class="badge" style="background: #2C5EAD; color: white;">Heritage</div>
+                        <div class="badge grid-card-badge badge-heritage">Heritage</div>
                     </div>
                     <div class="grid-card-content">
-                        <h3 style="margin-bottom: 8px; font-size: 18px;">Calle Crisologo</h3>
-                        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px; flex: 1;">Iconic cobblestone street with colonial Spanish architecture.</p>
-                        <button class="btn-primary" style="width: 100%; padding: 10px; font-size: 14px;" data-target=".map-section" data-dest="Calle Crisologo">Find on Map</button>
+                        <h3 class="grid-card-title">Calle Crisologo</h3>
+                        <p class="grid-card-desc">Iconic cobblestone street with colonial Spanish architecture.</p>
+                        <button class="btn-primary grid-card-btn" data-target=".map-section" data-dest="Calle Crisologo">Find on Map</button>
                     </div>
                 </div>
                 <div class="grid-card destination-grid-card" data-category="church">
                     <div class="grid-card-img">
                         <img src="../Assets/bantay -church.jpg" onerror="this.src='https://placehold.co/400x300'" alt="Bantay Bell Tower" />
-                        <div style="position: absolute; top: 12px; left: 12px;" class="badge" style="background: #7B1FA2; color: white;">Church</div>
+                        <div class="badge grid-card-badge badge-church">Church</div>
                     </div>
                     <div class="grid-card-content">
-                        <h3 style="margin-bottom: 8px; font-size: 18px;">Bantay Bell Tower</h3>
-                        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px; flex: 1;">16th-century watchtower with panoramic city views.</p>
-                        <button class="btn-primary" style="width: 100%; padding: 10px; font-size: 14px;" data-target=".map-section" data-dest="Bantay Bell Tower">Find on Map</button>
+                        <h3 class="grid-card-title">Bantay Bell Tower</h3>
+                        <p class="grid-card-desc">16th-century watchtower with panoramic city views.</p>
+                        <button class="btn-primary grid-card-btn" data-target=".map-section" data-dest="Bantay Bell Tower">Find on Map</button>
                     </div>
                 </div>
                 <div class="grid-card destination-grid-card" data-category="family">
                     <div class="grid-card-img">
                         <img src="../Assets/Baluarte-Zoo.jpg" onerror="this.src='https://placehold.co/400x300'" alt="Baluarte Zoo" />
-                        <div style="position: absolute; top: 12px; left: 12px;" class="badge" style="background: #FF9800; color: white;">Family</div>
+                        <div class="badge grid-card-badge badge-family">Family</div>
                     </div>
                     <div class="grid-card-content">
-                        <h3 style="margin-bottom: 8px; font-size: 18px;">Baluarte Zoo</h3>
-                        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px; flex: 1;">Private zoo with exotic animals and lush botanical gardens.</p>
-                        <button class="btn-primary" style="width: 100%; padding: 10px; font-size: 14px;" data-target=".map-section" data-dest="Baluarte Zoo">Find on Map</button>
+                        <h3 class="grid-card-title">Baluarte Zoo</h3>
+                        <p class="grid-card-desc">Private zoo with exotic animals and lush botanical gardens.</p>
+                        <button class="btn-primary grid-card-btn" data-target=".map-section" data-dest="Baluarte Zoo">Find on Map</button>
                     </div>
                 </div>
                 <div class="grid-card destination-grid-card" data-category="nature">
                     <div class="grid-card-img">
                         <img src="../Assets/Hidden-Garden-Restaurant-Vigan.jpg" onerror="this.src='https://placehold.co/400x300'" alt="Hidden Garden" />
-                        <div style="position: absolute; top: 12px; left: 12px;" class="badge" style="background: #43A047; color: white;">Nature</div>
+                        <div class="badge grid-card-badge badge-nature">Nature</div>
                     </div>
                     <div class="grid-card-content">
-                        <h3 style="margin-bottom: 8px; font-size: 18px;">Hidden Garden</h3>
-                        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px; flex: 1;">Lush tropical garden paradise with waterfalls and rare plants.</p>
-                        <button class="btn-primary" style="width: 100%; padding: 10px; font-size: 14px;" data-target=".map-section" data-dest="Hidden Garden">Find on Map</button>
+                        <h3 class="grid-card-title">Hidden Garden</h3>
+                        <p class="grid-card-desc">Lush tropical garden paradise with waterfalls and rare plants.</p>
+                        <button class="btn-primary grid-card-btn" data-target=".map-section" data-dest="Hidden Garden">Find on Map</button>
                     </div>
                 </div>
                 <div class="grid-card destination-grid-card" data-category="beach">
                     <div class="grid-card-img">
                         <img src="../Assets/santiago-cove.jpg" onerror="this.src='https://placehold.co/400x300'" alt="Santiago Cove" />
-                        <div style="position: absolute; top: 12px; left: 12px;" class="badge" style="background: #00ACC1; color: white;">Beach</div>
+                        <div class="badge grid-card-badge badge-beach">Beach</div>
                     </div>
                     <div class="grid-card-content">
-                        <h3 style="margin-bottom: 8px; font-size: 18px;">Santiago Cove</h3>
-                        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px; flex: 1;">Secluded cove with turquoise waters and dramatic cliffs.</p>
-                        <button class="btn-primary" style="width: 100%; padding: 10px; font-size: 14px;" data-target=".map-section" data-dest="Santiago Cove">Find on Map</button>
+                        <h3 class="grid-card-title">Santiago Cove</h3>
+                        <p class="grid-card-desc">Secluded cove with turquoise waters and dramatic cliffs.</p>
+                        <button class="btn-primary grid-card-btn" data-target=".map-section" data-dest="Santiago Cove">Find on Map</button>
                     </div>
                 </div>
                 <div class="grid-card destination-grid-card" data-category="nature">
                     <div class="grid-card-img">
                         <img src="../Assets/pinsal-falls.jpg" onerror="this.src='https://placehold.co/400x300'" alt="Pinsal Falls" />
-                        <div style="position: absolute; top: 12px; left: 12px;" class="badge" style="background: #43A047; color: white;">Nature</div>
+                        <div class="badge grid-card-badge badge-nature">Nature</div>
                     </div>
                     <div class="grid-card-content">
-                        <h3 style="margin-bottom: 8px; font-size: 18px;">Pinsal Falls</h3>
-                        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px; flex: 1;">Multi-tiered waterfall surrounded by lush mountain forest.</p>
-                        <button class="btn-primary" style="width: 100%; padding: 10px; font-size: 14px;" data-target=".map-section" data-dest="Pinsal Falls">Find on Map</button>
+                        <h3 class="grid-card-title">Pinsal Falls</h3>
+                        <p class="grid-card-desc">Multi-tiered waterfall surrounded by lush mountain forest.</p>
+                        <button class="btn-primary grid-card-btn" data-target=".map-section" data-dest="Pinsal Falls">Find on Map</button>
                     </div>
                 </div>
                 <div class="grid-card destination-grid-card" data-category="church">
                     <div class="grid-card-img">
                         <img src="../Assets/sta-maria-church.jpg" onerror="this.src='https://placehold.co/400x300'" alt="Sta. Maria Church" />
-                        <div style="position: absolute; top: 12px; left: 12px;" class="badge" style="background: #7B1FA2; color: white;">Church</div>
+                        <div class="badge grid-card-badge badge-church">Church</div>
                     </div>
                     <div class="grid-card-content">
-                        <h3 style="margin-bottom: 8px; font-size: 18px;">Sta. Maria Church</h3>
-                        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px; flex: 1;">UNESCO baroque church atop a hill with sweeping valley views.</p>
-                        <button class="btn-primary" style="width: 100%; padding: 10px; font-size: 14px;" data-target=".map-section" data-dest="Sta. Maria Church">Find on Map</button>
+                        <h3 class="grid-card-title">Sta. Maria Church</h3>
+                        <p class="grid-card-desc">UNESCO baroque church atop a hill with sweeping valley views.</p>
+                        <button class="btn-primary grid-card-btn" data-target=".map-section" data-dest="Sta. Maria Church">Find on Map</button>
                     </div>
                 </div>
                 <div class="grid-card destination-grid-card" data-category="beach">
                     <div class="grid-card-img">
                         <img src="../Assets/sta-catalina-beach.png" onerror="this.src='https://placehold.co/400x300'" alt="Sta Catalina Beach" />
-                        <div style="position: absolute; top: 12px; left: 12px;" class="badge" style="background: #00ACC1; color: white;">Beach</div>
+                        <div class="badge grid-card-badge badge-beach">Beach</div>
                     </div>
                     <div class="grid-card-content">
-                        <h3 style="margin-bottom: 8px; font-size: 18px;">Sta Catalina Beach</h3>
-                        <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px; flex: 1;">Volcanic sand beach famous for stunning sunsets and surfing.</p>
-                        <button class="btn-primary" style="width: 100%; padding: 10px; font-size: 14px;" data-target=".map-section" data-dest="Sta Catalina Beach">Find on Map</button>
+                        <h3 class="grid-card-title">Sta Catalina Beach</h3>
+                        <p class="grid-card-desc">Volcanic sand beach famous for stunning sunsets and surfing.</p>
+                        <button class="btn-primary grid-card-btn" data-target=".map-section" data-dest="Sta Catalina Beach">Find on Map</button>
                     </div>
                 </div>
             </div>
-            <div id="no-results-msg" style="display: none; text-align: center; margin-top: 40px; color: var(--text-muted);">
+            <div id="no-results-msg" class="no-results-msg">
                 No destinations match this category yet.
             </div>
         </section>
 
         <section class="map-section">
             <div class="map-container">
-                <h2 class="section-title" style="font-size: 48px;">Interactive Map</h2>
+                <h2 class="section-title map-section-title">Interactive Map</h2>
                 <p class="section-subtitle">Click any marker to let your guide bring you there</p>
 
                 <div class="map-controls">
@@ -190,63 +190,63 @@
                         <div class="destinations-sidebar-header">All Destinations</div>
                         
                         <div class="destination-card active" data-title="Vigan Heritage Village">
-                            <div class="dest-icon-bg" style="background: #2C5EAD; border-radius: 50%; width: 16px; height: 16px; margin: 8px;"></div>
+                            <div class="dest-icon-bg" class="dest-icon-bg icon-heritage"></div>
                             <div class="dest-info-col">
                                 <div class="dest-title">Vigan Heritage Village</div>
                                 <div class="dest-meta-wrap">⏱️ 0 km</div>
                             </div>
                         </div>
                         <div class="destination-card" data-title="Calle Crisologo">
-                            <div class="dest-icon-bg" style="background: #2C5EAD; border-radius: 50%; width: 16px; height: 16px; margin: 8px;"></div>
+                            <div class="dest-icon-bg" class="dest-icon-bg icon-heritage"></div>
                             <div class="dest-info-col">
                                 <div class="dest-title">Calle Crisologo</div>
                                 <div class="dest-meta-wrap">⏱️ 0.3 km</div>
                             </div>
                         </div>
                         <div class="destination-card" data-title="Bantay Bell Tower">
-                            <div class="dest-icon-bg" style="background: #7B1FA2; border-radius: 50%; width: 16px; height: 16px; margin: 8px;"></div>
+                            <div class="dest-icon-bg" class="dest-icon-bg icon-church"></div>
                             <div class="dest-info-col">
                                 <div class="dest-title">Bantay Bell Tower</div>
                                 <div class="dest-meta-wrap">⏱️ 1.5 km</div>
                             </div>
                         </div>
                         <div class="destination-card" data-title="Baluarte Zoo">
-                            <div class="dest-icon-bg" style="background: #FF9800; border-radius: 50%; width: 16px; height: 16px; margin: 8px;"></div>
+                            <div class="dest-icon-bg" class="dest-icon-bg icon-family"></div>
                             <div class="dest-info-col">
                                 <div class="dest-title">Baluarte Zoo</div>
                                 <div class="dest-meta-wrap">⏱️ 3 km</div>
                             </div>
                         </div>
                         <div class="destination-card" data-title="Hidden Garden">
-                            <div class="dest-icon-bg" style="background: #43A047; border-radius: 50%; width: 16px; height: 16px; margin: 8px;"></div>
+                            <div class="dest-icon-bg" class="dest-icon-bg icon-nature"></div>
                             <div class="dest-info-col">
                                 <div class="dest-title">Hidden Garden</div>
                                 <div class="dest-meta-wrap">⏱️ 4 km</div>
                             </div>
                         </div>
                         <div class="destination-card" data-title="Santiago Cove">
-                            <div class="dest-icon-bg" style="background: #00ACC1; border-radius: 50%; width: 16px; height: 16px; margin: 8px;"></div>
+                            <div class="dest-icon-bg" class="dest-icon-bg icon-beach"></div>
                             <div class="dest-info-col">
                                 <div class="dest-title">Santiago Cove</div>
                                 <div class="dest-meta-wrap">⏱️ 22 km</div>
                             </div>
                         </div>
                         <div class="destination-card" data-title="Pinsal Falls">
-                            <div class="dest-icon-bg" style="background: #43A047; border-radius: 50%; width: 16px; height: 16px; margin: 8px;"></div>
+                            <div class="dest-icon-bg" class="dest-icon-bg icon-nature"></div>
                             <div class="dest-info-col">
                                 <div class="dest-title">Pinsal Falls</div>
                                 <div class="dest-meta-wrap">⏱️ 18 km</div>
                             </div>
                         </div>
                         <div class="destination-card" data-title="Sta. Maria Church">
-                            <div class="dest-icon-bg" style="background: #7B1FA2; border-radius: 50%; width: 16px; height: 16px; margin: 8px;"></div>
+                            <div class="dest-icon-bg" class="dest-icon-bg icon-church"></div>
                             <div class="dest-info-col">
                                 <div class="dest-title">Sta. Maria Church</div>
                                 <div class="dest-meta-wrap">⏱️ 27 km</div>
                             </div>
                         </div>
                         <div class="destination-card" data-title="Sta Catalina Beach">
-                            <div class="dest-icon-bg" style="background: #00ACC1; border-radius: 50%; width: 16px; height: 16px; margin: 8px;"></div>
+                            <div class="dest-icon-bg" class="dest-icon-bg icon-beach"></div>
                             <div class="dest-info-col">
                                 <div class="dest-title">Sta Catalina Beach</div>
                                 <div class="dest-meta-wrap">⏱️ 30 km</div>
@@ -254,23 +254,23 @@
                         </div>
                     </div>
 
-                    <div class="map-canvas" style="position: relative; background: #E8F4F8;">
-                        <img src="../Assets/Ilocos%20Sur_MAP.png" style="width: 100%; height: 100%; object-fit: contain; position: absolute; inset: 0;" alt="Ilocos Sur Interactive Map">
+                    <div class="map-canvas map-canvas-bg">
+                        <img src="../Assets/Ilocos%20Sur_MAP.png" class="map-canvas-img" alt="Ilocos Sur Interactive Map">
                         
                         <!-- Map Markers -->
-                        <div class="map-shape map-marker-point" style="background: #2C5EAD; width: 24px; height: 24px; left: 43%; top: 30%; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%;"></div>
-                        <div class="map-shape map-marker-point" style="background: #2C5EAD; width: 24px; height: 24px; left: 43.5%; top: 31%; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%;"></div>
-                        <div class="map-shape map-marker-point" style="background: #7B1FA2; width: 24px; height: 24px; left: 45%; top: 29%; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%;"></div>
-                        <div class="map-shape map-marker-point" style="background: #FF9800; width: 24px; height: 24px; left: 44%; top: 33%; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%;"></div>
-                        <div class="map-shape map-marker-point" style="background: #43A047; width: 24px; height: 24px; left: 42%; top: 32%; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%;"></div>
-                        <div class="map-shape map-marker-point" style="background: #00ACC1; width: 24px; height: 24px; left: 44%; top: 62%; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%;"></div>
-                        <div class="map-shape map-marker-point" style="background: #43A047; width: 24px; height: 24px; left: 49%; top: 49%; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%;"></div>
-                        <div class="map-shape map-marker-point" style="background: #7B1FA2; width: 24px; height: 24px; left: 46%; top: 50%; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%;"></div>
-                        <div class="map-shape map-marker-point" style="background: #00ACC1; width: 24px; height: 24px; left: 40%; top: 30%; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%;"></div>
+                        <div class="map-shape map-marker-point" class="map-marker-heritage map-pos-1"></div>
+                        <div class="map-shape map-marker-point" class="map-marker-heritage map-pos-2"></div>
+                        <div class="map-shape map-marker-point" class="map-marker-church map-pos-3"></div>
+                        <div class="map-shape map-marker-point" class="map-marker-family map-pos-4"></div>
+                        <div class="map-shape map-marker-point" class="map-marker-nature map-pos-5"></div>
+                        <div class="map-shape map-marker-point" class="map-marker-beach map-pos-6"></div>
+                        <div class="map-shape map-marker-point" class="map-marker-nature map-pos-7"></div>
+                        <div class="map-shape map-marker-point" class="map-marker-church map-pos-8"></div>
+                        <div class="map-shape map-marker-point" class="map-marker-beach map-pos-9"></div>
 
-                        <div id="tour-vehicle" class="map-shape" style="width: 70px; height: 70px; left: 43%; top: 30%; transform: translate(-50%, -50%); z-index: 50; transition: all 1.5s ease;">
+                        <div id="tour-vehicle" class="map-shape tour-vehicle-wrapper">
                             <div id="vehicle-pulse" class="vehicle-pulse"></div>
-                            <img id="vehicle-img" src="../Assets/Tricycle_mode.png" onerror="this.src='https://placehold.co/70x70'" alt="Vehicle" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img id="vehicle-img" src="../Assets/Tricycle_mode.png" onerror="this.src='https://placehold.co/70x70'" alt="Vehicle" class="tour-vehicle-img">
                         </div>
 
                         <div class="map-legend">
@@ -283,18 +283,18 @@
                     </div>
                 </div>
 
-                <div class="map-detail-card" style="margin-top: 24px;">
+                <div class="map-detail-card map-detail-card-margin">
                     <div class="map-detail-img-wrap">
                         <img id="map-detail-img" src="../Assets/vigan-heritage-village.png" onerror="this.src='https://placehold.co/600x400'" alt="Detail" />
-                        <div style="position: absolute; bottom: 16px; left: 16px;" class="badge" id="map-detail-tag" style="background: #2C5EAD; color: white;">Heritage</div>
+                        <div style="position: absolute; bottom: 16px; left: 16px;" class="badge map-detail-tag-badge" id="map-detail-tag">Heritage</div>
                     </div>
                     <div class="map-detail-content">
-                        <h3 id="map-detail-title" style="font-size: 26px; font-family: 'Playfair Display', serif; font-weight: 700; color: #1A2332;">Vigan Heritage Village</h3>
-                        <p style="margin: 6px 0 16px 0; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 4px;">
+                        <h3 id="map-detail-title" class="map-detail-title-text">Vigan Heritage Village</h3>
+                        <p class="map-detail-reviews-wrap">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <span id="map-detail-reviews" style="color: var(--text-muted);">4.9 (12,847 reviews)</span>
+                            <span id="map-detail-reviews" class="map-detail-reviews-text">4.9 (12,847 reviews)</span>
                         </p>
-                        <p id="map-detail-desc" style="color: #4B5563; font-size: 15px; line-height: 1.6; margin-bottom: 24px;">UNESCO World Heritage colonial town with cobblestone streets.</p>
+                        <p id="map-detail-desc" class="map-detail-desc-text">UNESCO World Heritage colonial town with cobblestone streets.</p>
                         
                         <div class="info-grid">
                             <div class="info-box">
@@ -306,8 +306,8 @@
                                 <div class="info-value" id="map-detail-entrance">Free</div>
                             </div>
                         </div>
-                        <p id="map-detail-distance" style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px; font-weight: 500;">0 km from Vigan · town center</p>
-                        <button id="map-explore-btn" class="btn-primary" style="margin-top: auto; width: 100%; padding: 14px; border-radius: 24px; font-size: 16px; font-weight: 700; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); box-shadow: 0 8px 16px -4px rgba(255, 143, 0, 0.5), 0 0 20px rgba(255, 143, 0, 0.3); transition: all 0.3s ease;">Explore More →</button>
+                        <p id="map-detail-distance" class="map-detail-distance-text">0 km from Vigan · town center</p>
+                        <button id="map-explore-btn" class="btn-primary map-explore-btn">Explore More →</button>
                     </div>
                 </div>
             </div>
@@ -315,8 +315,8 @@
 
         <section class="tour-route-section">
             <div class="tour-route-inner">
-                <div style="text-align: center; margin-bottom: 40px;">
-                    <div class="badge badge-accent" style="margin-bottom: 12px;">🛺 SUGGESTED TOUR ROUTE</div>
+                <div class="tour-route-header-wrap">
+                    <div class="badge badge-accent tour-route-badge">🛺 SUGGESTED TOUR ROUTE</div>
                     <h2 class="section-title">A Perfect Day in Ilocos Sur</h2>
                 </div>
 
@@ -330,7 +330,7 @@
                             <div class="tour-stop-info">
                                 <div class="tour-stop-time">8:00 AM</div>
                                 <div class="tour-stop-title">Vigan Heritage Village</div>
-                                <div style="color: var(--text-muted); font-size: 14px;">Start your day exploring the UNESCO-listed cobblestone streets.</div>
+                                <div class="tour-stop-desc">Start your day exploring the UNESCO-listed cobblestone streets.</div>
                             </div>
                         </div>
                         <div class="tour-stop" data-stop="2">
@@ -341,7 +341,7 @@
                             <div class="tour-stop-info">
                                 <div class="tour-stop-time">9:30 AM</div>
                                 <div class="tour-stop-title">Bantay Bell Tower</div>
-                                <div style="color: var(--text-muted); font-size: 14px;">Climb the 16th-century watchtower for sweeping views of the Vigan cityscape.</div>
+                                <div class="tour-stop-desc">Climb the 16th-century watchtower for sweeping views of the Vigan cityscape.</div>
                             </div>
                         </div>
                         <div class="tour-stop" data-stop="3">
@@ -352,7 +352,7 @@
                             <div class="tour-stop-info">
                                 <div class="tour-stop-time">11:00 AM</div>
                                 <div class="tour-stop-title">Baluarte Zoo</div>
-                                <div style="color: var(--text-muted); font-size: 14px;">Meet exotic animals and wander the botanical gardens — a family favorite.</div>
+                                <div class="tour-stop-desc">Meet exotic animals and wander the botanical gardens — a family favorite.</div>
                             </div>
                         </div>
                         <div class="tour-stop" data-stop="4">
@@ -363,7 +363,7 @@
                             <div class="tour-stop-info">
                                 <div class="tour-stop-time">1:00 PM</div>
                                 <div class="tour-stop-title">Hidden Garden</div>
-                                <div style="color: var(--text-muted); font-size: 14px;">Enjoy lunch surrounded by lush tropical greenery and small waterfalls.</div>
+                                <div class="tour-stop-desc">Enjoy lunch surrounded by lush tropical greenery and small waterfalls.</div>
                             </div>
                         </div>
                         <div class="tour-stop" data-stop="5">
@@ -373,7 +373,7 @@
                             <div class="tour-stop-info">
                                 <div class="tour-stop-time">3:00 PM</div>
                                 <div class="tour-stop-title">Santiago Cove</div>
-                                <div style="color: var(--text-muted); font-size: 14px;">Wind down with turquoise waters and dramatic cliffside views before sunset.</div>
+                                <div class="tour-stop-desc">Wind down with turquoise waters and dramatic cliffside views before sunset.</div>
                             </div>
                         </div>
                     </div>
@@ -381,10 +381,10 @@
                     <div class="tour-detail-display">
                         <img id="tour-detail-img" src="../Assets/vigan-heritage-village.png" onerror="this.src='https://placehold.co/400x300'" alt="Tour stop">
                         <div class="tour-detail-body">
-                            <div id="tour-detail-badge" class="badge" style="background: var(--bg-page); color: var(--text-muted); margin-bottom: 8px;">Stop 1 • 8:00 AM</div>
-                            <h3 id="tour-detail-title" style="font-size: 24px; margin-bottom: 8px;">Vigan Heritage Village</h3>
-                            <p id="tour-detail-desc" style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px;">Start your day exploring the UNESCO-listed cobblestone streets before the crowds arrive.</p>
-                            <button id="tour-start-btn" class="btn-primary" style="width: 100%; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); box-shadow: 0 0 15px rgba(255, 143, 0, 0.4), 0 4px 6px rgba(255, 143, 0, 0.2);">Start Guided Tour ✨</button>
+                            <div id="tour-detail-badge" class="badge tour-detail-badge-style">Stop 1 • 8:00 AM</div>
+                            <h3 id="tour-detail-title" class="tour-detail-title-text">Vigan Heritage Village</h3>
+                            <p id="tour-detail-desc" class="tour-detail-desc-text">Start your day exploring the UNESCO-listed cobblestone streets before the crowds arrive.</p>
+                            <button id="tour-start-btn" class="btn-primary tour-start-btn">Start Guided Tour ✨</button>
                         </div>
                     </div>
                 </div>
@@ -396,15 +396,15 @@
         <div class="footer-grid">
             <div>
                 <h3 class="footer-col-title">🏛️ Ilocos Sur Tourism</h3>
-                <p style="font-size: 14px; line-height: 1.6;">Discover the heritage, culture, and natural wonders of Ilocos Sur, Philippines. Your gateway to the Ilocandia experience.</p>
+                <p class="footer-about-text">Discover the heritage, culture, and natural wonders of Ilocos Sur, Philippines. Your gateway to the Ilocandia experience.</p>
             </div>
             <div>
                 <h3 class="footer-col-title">Explore</h3>
                 <div class="footer-links">
-                    <span style="cursor: pointer;" onclick="document.querySelector('.grid-section').scrollIntoView({behavior: 'smooth'})">Destinations</span>
-                    <span style="cursor: pointer;" onclick="document.querySelector('.map-section').scrollIntoView({behavior: 'smooth'})">Interactive Map</span>
-                    <span style="cursor: pointer;" onclick="document.querySelector('.tour-route-section').scrollIntoView({behavior: 'smooth'})">Tour Route</span>
-                    <span style="cursor: pointer;" onclick="document.querySelector('.footer-grid').scrollIntoView({behavior: 'smooth'})">About</span>
+                    <span class="footer-clickable-link" onclick="document.querySelector('.grid-section').scrollIntoView({behavior: 'smooth'})">Destinations</span>
+                    <span class="footer-clickable-link" onclick="document.querySelector('.map-section').scrollIntoView({behavior: 'smooth'})">Interactive Map</span>
+                    <span class="footer-clickable-link" onclick="document.querySelector('.tour-route-section').scrollIntoView({behavior: 'smooth'})">Tour Route</span>
+                    <span class="footer-clickable-link" onclick="document.querySelector('.footer-grid').scrollIntoView({behavior: 'smooth'})">About</span>
                 </div>
             </div>
             <div>
@@ -420,112 +420,118 @@
             © 2026 Ilocos Sur Tourism Portal. All rights reserved.
         </div>
     </footer>
-<div id="explore-modal-overlay" style="position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 100000; display: none; justify-content: center; align-items: center; padding: 20px; opacity: 0; transition: opacity 0.3s ease;">
-    <div style="width: 100%; max-width: 1071px; max-height: 90vh; overflow-y: auto; background: #F9F4EC; border-radius: 24px; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
-        
-        <button id="close-explore-modal" style="position: absolute; top: 16px; right: 16px; z-index: 10; background: rgba(0,0,0,0.5); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 24px; display: flex; justify-content: center; align-items: center; transition: background 0.2s;">&times;</button>
+<div id="explore-modal-overlay">
+    <div>
+        <button id="close-explore-modal">&times;</button>
 
-        <div style="width: 100%; height: 100%; background: #F9F4EC; border-radius: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-            <div style="align-self: stretch; height: 354px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                <div style="align-self: stretch; height: 320px; position: relative; overflow: hidden; border-radius: 24px 24px 0 0;">
-                    <img id="modal-ext-img" src="../Assets/vigan-heritage-village.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Destination Background">
+        <div>
+            <div>
+                <div>
+                    <img id="modal-ext-img" src="../Assets/vigan-heritage-village.png" alt="Destination Background">
                 </div>
-                <div style="width: 100%; height: 320px; left: 0px; top: 0px; position: absolute; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(10, 20, 40, 0.85) 100%); border-radius: 24px 24px 0 0;"></div>
-                <div style="width: 100%; height: 4px; left: 0px; top: 316px; position: absolute; background: #2C5EAD"></div>
+                <div></div>
+                <div></div>
                 
-                <div style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px; left: 16px; top: 16px; position: absolute; background: rgba(0, 0, 0, 0.50); border-radius: 26843500px; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                    <div style="color: #1A2332; font-size: 14px; font-family: Poppins; font-weight: 400; line-height: 20px;">🚌</div>
-                    <div style="color: white; font-size: 12px; font-family: Poppins; font-weight: 400; line-height: 16px;" id="modal-ext-dist">~0 min away</div>
+                <div>
+                    <div>🚌</div>
+                    <div id="modal-ext-dist">~0 min away</div>
                 </div>
                 
-                <div style="width: 100%; padding: 24px; left: 0px; top: 180.03px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; box-sizing: border-box;">
-                    <div style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                        <div id="modal-ext-category-bg" style="padding: 2px 12px; background: #2C5EAD; border-radius: 26843500px">
-                            <div id="modal-ext-category" style="color: white; font-size: 12px; font-family: Poppins; font-weight: 600; line-height: 16px;">Heritage</div>
+                <div>
+                    <div>
+                        <div id="modal-ext-category-bg">
+                            <div id="modal-ext-category">Heritage</div>
                         </div>
-                        <div style="color: rgba(255, 255, 255, 0.60); font-size: 12px; font-family: Poppins; font-weight: 400; line-height: 16px;">Best: Early morning (6–9 AM) or late afternoon (4–7 PM)</div>
+                        <div>Best: Early morning (6–9 AM) or late afternoon (4–7 PM)</div>
                     </div>
-                    <div style="width: 100%; padding-top: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div id="modal-ext-title" style="color: white; font-size: 40px; font-family: Playfair Display; font-weight: 800; line-height: 48px;">Vigan Heritage Village</div>
+                    <div>
+                        <div id="modal-ext-title">Vigan Heritage Village</div>
                     </div>
-                    <div style="align-self: stretch; padding-top: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div style="justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
-                            <div style="color: #FFD700; font-size: 14px;">★★★★★</div>
-                            <div id="modal-ext-rating" style="color: rgba(255, 255, 255, 0.80); font-size: 12px; font-family: Poppins; font-weight: 400; line-height: 16px;">4.9 (12,847)</div>
-                            <div style="color: rgba(255, 255, 255, 0.70); font-size: 12px; font-family: Poppins; font-weight: 400; line-height: 16px;">| ⏱️ 3–4 hours</div>
-                            <div style="color: rgba(255, 255, 255, 0.70); font-size: 12px; font-family: Poppins; font-weight: 400; line-height: 16px;">| 📍 Ilocos Sur</div>
+                    <div>
+                        <div>
+                            <div>★★★★★</div>
+                            <div id="modal-ext-rating">4.9 (12,847)</div>
+                            <div>| ⏱️ 3–4 hours</div>
+                            <div>| 📍 Ilocos Sur</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div style="width: 100%; padding: 24px; box-sizing: border-box; display: flex; gap: 24px; flex-wrap: wrap;">
+            <div>
                 
-                <div style="flex: 2; min-width: 300px; display: flex; flex-direction: column; gap: 20px;">
+                <div>
                     <div>
-                        <div style="justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                            <div style="width: 24px; height: 24px; background: #2C5EAD; border-radius: 50%; justify-content: center; align-items: center; display: flex">
-                                <div style="color: white; font-size: 12px;">📖</div>
+                        <div>
+                            <div>
+                                <div>📖</div>
                             </div>
-                            <div style="color: #1A2332; font-size: 15.20px; font-family: Poppins; font-weight: 700;">Historical Background</div>
+                            <div>Historical Background</div>
                         </div>
-                        <div id="modal-ext-history" style="padding-top: 8px; color: #6B7280; font-size: 13.60px; font-family: Poppins; font-weight: 400; line-height: 24.48px;">
+                        <div id="modal-ext-history">
                             Founded in 1572 by Juan de Salcedo, Vigan was the third-largest Spanish colonial city in the Philippines. Its streets have remained virtually unchanged for over 450 years, earning it UNESCO World Heritage status in 1999.
                         </div>
                     </div>
 
                     <div>
-                        <div style="justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-                            <div style="width: 24px; height: 24px; background: #2C5EAD; border-radius: 50%; justify-content: center; align-items: center; display: flex">
-                                <div style="color: white; font-size: 12px;">🏛️</div>
+                        <div>
+                            <div>
+                                <div>🏛️</div>
                             </div>
-                            <div style="color: #1A2332; font-size: 15.20px; font-family: Poppins; font-weight: 700;">Cultural Significance</div>
+                            <div>Cultural Significance</div>
                         </div>
-                        <div id="modal-ext-culture" style="padding-top: 8px; color: #6B7280; font-size: 13.60px; font-family: Poppins; font-weight: 400; line-height: 24.48px;">
+                        <div id="modal-ext-culture">
                             Vigan represents the only planned Spanish colonial city remaining in Asia. Its fusion of Asian building design and construction with European architectural concepts makes it a living museum.
                         </div>
                     </div>
 
-                    <div style="padding: 16px; background: rgba(30, 136, 229, 0.07); border-radius: 16px; outline: 0.80px rgba(30, 136, 229, 0.14) solid;">
-                        <div style="color: #2C5EAD; font-size: 14.40px; font-family: Poppins; font-weight: 700; margin-bottom: 8px;">✨ Why Visitors Love This Place</div>
-                        <div id="modal-ext-love" style="color: #4B5563; font-size: 13.60px; font-family: Poppins; font-weight: 400; line-height: 23.12px;">
+                    <div>
+                        <div>✨ Why Visitors Love This Place</div>
+                        <div id="modal-ext-love">
                             Step back in time on the same cobblestone streets where Spanish colonizers, Chinese merchants, and Ilocano artisans once walked. Ride a kalesa at sunset and taste authentic Ilocano cuisine.
                         </div>
                     </div>
                 </div>
 
-                <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 12px;">
-                    <div style="color: #1A2332; font-size: 15.20px; font-family: Poppins; font-weight: 700; margin-bottom: 4px;">🗒️ Travel Info</div>
+                <div>
+                    <div>🗒️ Travel Info</div>
                     
-                    <div style="padding: 12px; background: white; border-radius: 14px; display: flex; gap: 8px;">
-                        <div style="color: #2C5EAD;">⏱️</div>
+                    <div>
+                        <div>⏱️</div>
                         <div>
-                            <div style="color: #9CA3AF; font-size: 11.20px; font-family: Poppins; font-weight: 600;">Opening Hours</div>
-                            <div id="modal-ext-hours" style="color: #1A2332; font-size: 12.80px; font-family: Poppins; font-weight: 400;">Open 24 hours</div>
+                            <div>Opening Hours</div>
+                            <div id="modal-ext-hours">Open 24 hours</div>
                         </div>
                     </div>
 
-                    <div style="padding: 12px; background: white; border-radius: 14px; display: flex; gap: 8px;">
-                        <div style="color: #2C5EAD;">🎫</div>
+                    <div>
+                        <div>🎫</div>
                         <div>
-                            <div style="color: #9CA3AF; font-size: 11.20px; font-family: Poppins; font-weight: 600;">Entrance Fee</div>
-                            <div id="modal-ext-entrance" style="color: #1A2332; font-size: 12.80px; font-family: Poppins; font-weight: 400;">Free</div>
+                            <div>Entrance Fee</div>
+                            <div id="modal-ext-entrance">Free</div>
                         </div>
                     </div>
 
-                    <div style="padding: 12px; background: white; border-radius: 14px; display: flex; gap: 8px;">
-                        <div style="color: #2C5EAD;">🅿️</div>
+                    <div>
+                        <div>🅿️</div>
                         <div>
-                            <div style="color: #9CA3AF; font-size: 11.20px; font-family: Poppins; font-weight: 600;">Parking</div>
-                            <div style="color: #1A2332; font-size: 12.80px; font-family: Poppins; font-weight: 400;">Available nearby</div>
+                            <div>Parking</div>
+                            <div>Available nearby</div>
                         </div>
                     </div>
 
-                    <div style="padding: 12px; background: #FFF3CD; border-radius: 14px; outline: 0.80px #FFD000 solid; display: flex; gap: 8px; margin-top: 8px;">
-                        <div style="color: #FF9800;">⚠️</div>
+                    <div>
+                        <div>⚠️</div>
                         <div>
-                            <div style="color: #FF9800; font-size: 11.20px; font-family: Poppins; font-weight: 700;">SAFETY NOTE</div>
-                            <div style="color: #6B7280; font-size: 12.48px; font-family: Poppins; font-weight: 400;">Watch for kalesa (horse carriages) on streets. Stay hydrated.</div>
+                            <div>SAFETY NOTE</div>
+                            <div>Watch for kalesa (horse carriages) on streets. Stay hydrated.</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>🏨 Suggested Hotels Nearby</div>
+                        <div id="modal-ext-hotels">
+                            <!-- Hotels injected dynamically -->
                         </div>
                     </div>
                 </div>
@@ -588,6 +594,26 @@
                     // (like data.history, data.culture). For now, it dynamically grabs the short desc.
                     document.getElementById('modal-ext-history').textContent = data.desc;
 
+                    // Render Hotels
+                    const hotelsContainer = document.getElementById('modal-ext-hotels');
+                    hotelsContainer.innerHTML = '';
+                    const hotelData = data.hotels || defaultHotels;
+                    hotelData.forEach(hotel => {
+                        const hotelCard = document.createElement('div');
+                        hotelCard.className = "hotel-card-container";
+                        
+                        hotelCard.innerHTML = `
+                            <div class="hotel-card-info">
+                                <div class="hotel-card-name">${hotel.name}</div>
+                                <div class="hotel-card-meta">
+                                    <span class="hotel-card-rating">${hotel.rating}</span>
+                                    <span class="hotel-card-reviews">${hotel.reviews} reviews</span>
+                                </div>
+                            </div>
+                        `;
+                        hotelsContainer.appendChild(hotelCard);
+                    });
+
                     exploreModalOverlay.style.display = 'flex';
                     void exploreModalOverlay.offsetWidth; // trigger reflow
                     exploreModalOverlay.style.opacity = '1';
@@ -633,6 +659,15 @@
         });
 
         // 4. Destination Database
+        const defaultTrivagoLink = "https://www.trivago.com.ph/en-PH/lm?themeId=401&search=200-427490&sem_keyword=hotel%20in%20ilocos%20sur&sem_creativeid=767060464053&sem_matchtype=e&sem_network=g&sem_device=c&sem_placement=&sem_target=&sem_adposition=&sem_param1=&sem_param2=&sem_campaignid=11602983981&sem_adgroupid=116774547767&sem_targetid=kwd-305085381743&sem_location=9060943&cipc=sem&cip=6319001271";
+        const defaultHotels = [
+            { name: "Airport View Hotel Vigan", rating: "9.4", reviews: "9", price: "₱ 2,295", link: defaultTrivagoLink },
+            { name: "Vigan Plaza Hotel", rating: "9.2", reviews: "18", price: "₱ 3,600", link: defaultTrivagoLink },
+            { name: "NSCC Casa De Vigan", rating: "8.3", reviews: "114", price: "₱ 1,624", link: defaultTrivagoLink },
+            { name: "Hotel Mercante", rating: "8.3", reviews: "189", price: "₱ 7,000", link: defaultTrivagoLink },
+            { name: "Vigan Traversa Hotel", rating: "8.2", reviews: "285", price: "₱ 1,900", link: defaultTrivagoLink }
+        ];
+
         const destDetails = {
             'Vigan Heritage Village': { img: '../Assets/vigan-heritage-village.png', category: 'Heritage', catColor: '#2C5EAD', rating: '4.9', reviews: '(12,847)', desc: 'UNESCO World Heritage colonial town with cobblestone streets.', hours: '6:00 AM – 6:00 PM', entrance: 'Free', distFull: '0 km from Vigan · town center' },
             'Calle Crisologo': { img: '../Assets/calle-crisologo.png', category: 'Heritage', catColor: '#2C5EAD', rating: '4.8', reviews: '(9,523)', desc: 'Iconic cobblestone street with colonial Spanish architecture.', hours: '24 hours', entrance: 'Free', distFull: '0.3 km from Vigan · ~5 min walk' },

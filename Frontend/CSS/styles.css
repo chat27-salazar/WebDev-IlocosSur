@@ -852,11 +852,186 @@ h1, h2, h3, h4, h5, h6 {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
 }
+.nav-logo-icon { font-size: 24px; }
+.plan-trip-btn { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); padding: 10px 20px; font-size: 14px; box-shadow: 0 0 15px rgba(255, 143, 0, 0.6), 0 4px 6px rgba(255, 143, 0, 0.3); }
+
+.hero-bg-img { background-image: url('../Assets/bantay%20-church.jpg'); background-size: cover; background-position: center; }
+
+.grid-card-badge { position: absolute; top: 12px; left: 12px; color: white; }
+.badge-heritage { background: #2C5EAD; }
+.badge-church { background: #7B1FA2; }
+.badge-family { background: #FF9800; }
+.badge-nature { background: #43A047; }
+.badge-beach { background: #00ACC1; }
+
+.grid-card-title { margin-bottom: 8px; font-size: 18px; }
+.grid-card-desc { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; flex: 1; }
+.grid-card-btn { width: 100%; padding: 10px; font-size: 14px; }
+
+.no-results-msg { display: none; text-align: center; margin-top: 40px; color: var(--text-muted); }
+
+.map-section-title { font-size: 48px; }
+.dest-icon-bg { border-radius: 50%; width: 16px; height: 16px; margin: 8px; }
+.icon-heritage { background: #2C5EAD; }
+.icon-church { background: #7B1FA2; }
+.icon-family { background: #FF9800; }
+.icon-nature { background: #43A047; }
+.icon-beach { background: #00ACC1; }
+
+.map-canvas-bg { position: relative; background: #E8F4F8; }
+.map-canvas-img { width: 100%; height: 100%; object-fit: contain; position: absolute; inset: 0; }
+
+.map-marker-heritage { background: #2C5EAD; width: 24px; height: 24px; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%; }
+.map-marker-church { background: #7B1FA2; width: 24px; height: 24px; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%; }
+.map-marker-family { background: #FF9800; width: 24px; height: 24px; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%; }
+.map-marker-nature { background: #43A047; width: 24px; height: 24px; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%; }
+.map-marker-beach { background: #00ACC1; width: 24px; height: 24px; transform: translate(-50%, -50%); border: 3px solid white; border-radius: 50%; }
+
+.map-pos-1 { left: 43%; top: 30%; }
+.map-pos-2 { left: 43.5%; top: 31%; }
+.map-pos-3 { left: 45%; top: 29%; }
+.map-pos-4 { left: 44%; top: 33%; }
+.map-pos-5 { left: 42%; top: 32%; }
+.map-pos-6 { left: 44%; top: 62%; }
+.map-pos-7 { left: 49%; top: 49%; }
+.map-pos-8 { left: 46%; top: 50%; }
+.map-pos-9 { left: 40%; top: 30%; }
+
+.tour-vehicle-wrapper { width: 70px; height: 70px; left: 43%; top: 30%; transform: translate(-50%, -50%); z-index: 50; transition: all 1.5s ease; }
+.tour-vehicle-img { width: 100%; height: 100%; object-fit: contain; }
+
+.map-detail-card-margin { margin-top: 24px; }
+.map-detail-tag-badge { position: absolute; bottom: 16px; left: 16px; background: #2C5EAD; color: white; }
+.map-detail-title-text { font-size: 26px; font-family: 'Playfair Display', serif; font-weight: 700; color: #1A2332; }
+.map-detail-reviews-wrap { margin: 6px 0 16px 0; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 4px; }
+.map-detail-reviews-text { color: var(--text-muted); }
+.map-detail-desc-text { color: #4B5563; font-size: 15px; line-height: 1.6; margin-bottom: 24px; }
+.map-detail-distance-text { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; font-weight: 500; }
+.map-explore-btn { margin-top: auto; width: 100%; padding: 14px; border-radius: 24px; font-size: 16px; font-weight: 700; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); box-shadow: 0 8px 16px -4px rgba(255, 143, 0, 0.5), 0 0 20px rgba(255, 143, 0, 0.3); transition: all 0.3s ease; }
+
+.tour-route-header-wrap { text-align: center; margin-bottom: 40px; }
+.tour-route-badge { margin-bottom: 12px; }
+.tour-stop-desc { color: var(--text-muted); font-size: 14px; }
+
+.tour-detail-badge-style { background: var(--bg-page); color: var(--text-muted); margin-bottom: 8px; }
+.tour-detail-title-text { font-size: 24px; margin-bottom: 8px; }
+.tour-detail-desc-text { color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+.tour-start-btn { width: 100%; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); box-shadow: 0 0 15px rgba(255, 143, 0, 0.4), 0 4px 6px rgba(255, 143, 0, 0.2); }
+
+.footer-about-text { font-size: 14px; line-height: 1.6; }
+.footer-clickable-link { cursor: pointer; }
+
+/* Hotel Card Dynamic Classes */
+.hotel-card-container { display: flex; justify-content: space-between; align-items: center; padding: 10px; background: white; border-radius: 12px; border: 1px solid #E5E7EB; }
+.hotel-card-info { display: flex; flex-direction: column; gap: 2px; }
+.hotel-card-name { color: #1E88E5; font-size: 13px; font-family: Poppins; font-weight: 600; line-height: 1.2; }
+.hotel-card-meta { display: flex; align-items: center; gap: 4px; }
+.hotel-card-rating { background: #0B5ED7; color: white; padding: 2px 4px; border-radius: 4px; font-size: 10px; font-weight: 700; }
+.hotel-card-reviews { color: #6B7280; font-size: 11px; }
 
 .kalesa-moving {
     animation: drive-kalesa-x 2.5s linear forwards, drive-kalesa-y 0.3s ease-in-out infinite;
 }
 
-.hidden {
-    display: none !important;
+.nav-logo-clickable { cursor: pointer; }
+
+/* ==========================================================================
+   Explore Modal Overlay
+   ========================================================================== */
+#explore-modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 100000; display: none; justify-content: center; align-items: center; padding: 20px; opacity: 0; transition: opacity 0.3s ease; }
+#explore-modal-overlay > div { width: 100%; max-width: 1071px; max-height: 90vh; overflow-y: auto; background: var(--bg-page); border-radius: 24px; position: relative; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+#close-explore-modal { position: absolute; top: 16px; right: 16px; z-index: 10; background: rgba(0,0,0,0.5); border: none; color: white; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 24px; display: flex; justify-content: center; align-items: center; transition: background 0.2s; }
+
+/* Inner wrapper */
+#explore-modal-overlay > div > div { width: 100%; height: 100%; background: var(--bg-page); border-radius: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex; }
+
+/* Header */
+#explore-modal-overlay > div > div > div:nth-child(1) { align-self: stretch; height: 354px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; }
+
+/* Image Wrap */
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(1) { align-self: stretch; height: 320px; position: relative; overflow: hidden; border-radius: 24px 24px 0 0; }
+#modal-ext-img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Gradient & Divider */
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(2) { width: 100%; height: 320px; left: 0px; top: 0px; position: absolute; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(10, 20, 40, 0.85) 100%); border-radius: 24px 24px 0 0; }
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(3) { width: 100%; height: 4px; left: 0px; top: 316px; position: absolute; background: var(--primary-dark); }
+
+/* Distance Badge */
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(4) { padding: 6px 12px; left: 16px; top: 16px; position: absolute; background: rgba(0, 0, 0, 0.50); border-radius: 9999px; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex; }
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) { color: var(--text-dark); font-size: 14px; font-weight: 400; line-height: 20px; }
+#modal-ext-dist { color: white; font-size: 12px; font-weight: 400; line-height: 16px; }
+
+/* Title Section */
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(5) { width: 100%; padding: 24px; left: 0px; top: 180px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; box-sizing: border-box; }
+
+/* Category Row */
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) { align-self: stretch; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex; }
+#modal-ext-category-bg { padding: 2px 12px; background: var(--primary-dark); border-radius: 9999px; }
+#modal-ext-category { color: white; font-size: 12px; font-weight: 600; line-height: 16px; }
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) { color: rgba(255, 255, 255, 0.60); font-size: 12px; font-weight: 400; line-height: 16px; }
+
+/* Title Wrap */
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) { width: 100%; padding-top: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; }
+#modal-ext-title { color: white; font-size: 40px; font-family: var(--font-heading); font-weight: 800; line-height: 48px; }
+
+/* Meta Wrap */
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(3) { align-self: stretch; padding-top: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex; }
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(3) > div { justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex; }
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(3) > div > div:nth-child(1) { color: #FFD700; font-size: 14px; }
+#modal-ext-rating { color: rgba(255, 255, 255, 0.80); font-size: 12px; font-weight: 400; line-height: 16px; }
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(3) > div > div:nth-child(3), 
+#explore-modal-overlay > div > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(3) > div > div:nth-child(4) { color: rgba(255, 255, 255, 0.70); font-size: 12px; font-weight: 400; line-height: 16px; }
+
+/* Body */
+#explore-modal-overlay > div > div > div:nth-child(2) { width: 100%; padding: 24px; box-sizing: border-box; display: flex; gap: 24px; flex-wrap: wrap; }
+
+/* Main Col */
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(1) { flex: 2; min-width: 300px; display: flex; flex-direction: column; gap: 20px; }
+
+/* Main Col Sections (History, Culture) */
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(1) > div > div:first-child { justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex; }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(1) > div > div:first-child > div:first-child { width: 24px; height: 24px; background: var(--primary-dark); border-radius: 50%; justify-content: center; align-items: center; display: flex; }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(1) > div > div:first-child > div:first-child > div { color: white; font-size: 12px; }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(1) > div > div:first-child > div:nth-child(2) { color: var(--text-dark); font-size: 15px; font-weight: 700; }
+
+#modal-ext-history, #modal-ext-culture { padding-top: 8px; color: var(--text-muted); font-size: 13.6px; font-weight: 400; line-height: 1.8; }
+
+/* Highlight Box */
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) { padding: 16px; background: rgba(30, 136, 229, 0.07); border-radius: 16px; outline: 1px solid rgba(30, 136, 229, 0.14); }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:first-child { color: var(--primary-dark); font-size: 14.4px; font-weight: 700; margin-bottom: 8px; }
+#modal-ext-love { color: #4B5563; font-size: 13.6px; font-weight: 400; line-height: 1.7; }
+
+/* Side Col */
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) { flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 12px; }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div:first-child { color: var(--text-dark); font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+
+/* Info Cards */
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2),
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3),
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) { padding: 12px; background: white; border-radius: 14px; display: flex; gap: 8px; }
+
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div > div:first-child { color: var(--primary-dark); }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div:first-child { color: #9CA3AF; font-size: 11px; font-weight: 600; }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) { color: var(--text-dark); font-size: 13px; font-weight: 400; }
+
+/* Safety Card */
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(5) { padding: 12px; background: #FFF3CD; border-radius: 14px; outline: 1px solid #FFD000; display: flex; gap: 8px; margin-top: 8px; }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(5) > div:first-child { color: #FF9800; }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(5) > div:nth-child(2) > div:first-child { color: #FF9800; font-size: 11px; font-weight: 700; }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(5) > div:nth-child(2) > div:nth-child(2) { color: var(--text-muted); font-size: 12.5px; font-weight: 400; }
+
+/* Hotels Section */
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(6) { margin-top: 12px; }
+#explore-modal-overlay > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(6) > div:first-child { color: var(--text-dark); font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+#modal-ext-hotels { display: flex; flex-direction: column; gap: 8px; }
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed; inset: 0; background: #e0f2fe; z-index: 99999; display: none; opacity: 0; transition: opacity 0.8s; overflow: hidden;
+}
+.loading-screen-bg {
+    position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 1;
+}
+.loading-screen-kalesa {
+    position: absolute; bottom: 12%; left: -300px; height: 50%; width: auto; z-index: 2; object-fit: contain;
 }
